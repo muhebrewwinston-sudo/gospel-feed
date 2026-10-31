@@ -1,0 +1,38 @@
+name: Post One KJV Verse Now LIVE
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: five-hour-bible-verse-poster
+  cancel-in-progress: false
+
+jobs:
+  post-verse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+      FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+      FACEBOOK_GRAPH_VERSION: ${{ vars.FACEBOOK_GRAPH_VERSION || 'v24.0' }}
+      POST_TIMEZONE: Africa/Blantyre
+      POSTER_DRY_RUN: 'false'
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Publish one live KJV post
+        run: python five_hour.py
+      - name: Save posting history
+        if: always()
+        run: git diff --quiet -- data/posted_verses.json || (git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com" && git add data/posted_verses.json && git commit -m "Update posted verse history" && git push)
