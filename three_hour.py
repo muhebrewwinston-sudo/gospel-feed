@@ -1,4 +1,4 @@
-"""Post rotating KJV verse cards and prewritten reflections in five daily slots."""
+"""Post rotating KJV verse cards and prewritten reflections every three hours."""
 
 from __future__ import annotations
 
@@ -16,9 +16,9 @@ from utils.formatter import format_post
 from utils.history import HistoryError, load_history, make_verse_key, save_history
 from utils.logger import configure_logging, logger
 
-FIRST_POST_HOUR = 3
-HOURS_BETWEEN_POSTS = 5
-POSTS_PER_DAY = 5
+FIRST_POST_HOUR = 0
+HOURS_BETWEEN_POSTS = 3
+POSTS_PER_DAY = 8
 ROOT = Path(__file__).resolve().parent
 REFLECTIONS = json.loads((ROOT / "data" / "reflections.json").read_text(encoding="utf-8"))
 

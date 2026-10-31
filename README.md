@@ -7,16 +7,16 @@ Posts one daily Bible verse to a Facebook Page using either:
 
 Publishing uses the official Facebook Graph API. The project does not scrape Bible websites.
 
-## Five-hour photo mode
+## Three-hour photo mode
 
-`five_hour.py` creates 1080×1350 portrait verse cards and uploads them through the Facebook Page photos API. It includes:
+`three_hour.py` creates 1080×1350 portrait verse cards and uploads them through the Facebook Page photos API. It includes:
 
-- The same exact public-domain KJV rotation at 03:00, 08:00, 13:00, 18:00, and 23:00 Malawi time.
+- The same exact public-domain KJV rotation every three hours at 00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, and 21:00 Malawi time.
 - Sixteen prewritten AI reflections—no live AI API key or ongoing AI charges.
 - Six themed background images and bundled DejaVu fonts for consistent cards on GitHub Actions.
 - Local image generation with Pillow, so scripture text is rendered accurately rather than generated inside an AI image.
 
-The existing `five-hours.yml` and `live-now.yml` workflows use this entry point. Run the test suite after upgrading with `python -m unittest discover -s tests -v`.
+The `three-hours.yml` and `live-now.yml` workflows use this entry point. Run the test suite with `python -m unittest discover -s tests -v`.
 
 ## Safety defaults
 
