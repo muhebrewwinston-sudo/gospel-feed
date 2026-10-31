@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+
+# Runtime logs and temporary files
+poster.log
+cron.log
+data/*.tmp
+
+# Editors / operating systems
+.DS_Store
+.vscode/
+.idea/
