@@ -71,6 +71,15 @@
       "slot": 4,
       "source": "kjv",
       "theme": "strength"
+    },
+    "2026-11-02|kjv|john 3:16 (kjv)|slot-0": {
+      "media": "photo",
+      "post_id": "383365871537147_122224427108575004",
+      "posted_at": "2026-11-02T00:41:18.091073+02:00",
+      "reference": "John 3:16 (KJV)",
+      "slot": 0,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
