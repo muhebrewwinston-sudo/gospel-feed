@@ -23,7 +23,7 @@ def format_post(
     ):
         clean_text = clean_text[1:-1].strip()
 
-    post = f'📖 Daily Bible Verse\n\n"{clean_text}"\n\n— {clean_reference}'
+    post = f'📖 Bible Feed\n\n"{clean_text}"\n\n— {clean_reference}'
     if clean_hashtags:
         post = f"{post}\n\n{clean_hashtags}"
 

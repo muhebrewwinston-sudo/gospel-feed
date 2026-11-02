@@ -7,6 +7,11 @@ from utils.card_generator import THEMES
 
 
 class ReflectionTests(unittest.TestCase):
+    def test_collection_has_one_thousand_unique_passages(self):
+        self.assertGreaterEqual(len(VERSES), 1000)
+        self.assertEqual(len({reference for _, reference in VERSES}), len(VERSES))
+        self.assertEqual(len({" ".join(text.casefold().split()) for text, _ in VERSES}), len(VERSES))
+
     def test_every_verse_has_a_reflection_and_valid_theme(self):
         path = Path(__file__).resolve().parents[1] / "data" / "reflections.json"
         data = json.loads(path.read_text(encoding="utf-8"))

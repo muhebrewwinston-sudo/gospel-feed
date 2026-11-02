@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DEFAULT_HASHTAGS = "#BibleVerse #DailyVerse #Gospel #Faith #Jesus"
+DEFAULT_HASHTAGS = "#BibleFeed #BibleVerse #DailyVerse #Gospel #Faith #Jesus #KJV"
 
 
 def env_bool(name: str, default: bool = False) -> bool:

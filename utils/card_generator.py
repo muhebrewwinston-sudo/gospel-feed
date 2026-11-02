@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BACKGROUNDS = ROOT / "assets" / "backgrounds"
 FONTS = ROOT / "assets" / "fonts"
 WIDTH, HEIGHT = 1080, 1350
+BRAND_NAME = "BIBLE FEED"
 THEMES = {
     "peace": ("peace.webp", (190, 220, 199)),
     "guidance": ("guidance.webp", (242, 199, 112)),
@@ -93,8 +94,11 @@ def generate_verse_card(verse_text: str, reference: str, output_path: Path, them
     image = Image.alpha_composite(image, panel)
     draw = ImageDraw.Draw(image)
 
-    draw.rounded_rectangle((WIDTH // 2 - 44, panel_top + 46, WIDTH // 2 + 44, panel_top + 51), radius=2, fill=accent)
-    _centered(draw, panel_top + 72, "DAILY BIBLE VERSE", _font("DejaVuSans-Bold.ttf", 27), (*accent, 255))
+    # A small cross and consistent wordmark make every themed card recognisably Bible Feed.
+    center_x = WIDTH // 2
+    draw.line((center_x, panel_top + 32, center_x, panel_top + 60), fill=accent, width=4)
+    draw.line((center_x - 10, panel_top + 41, center_x + 10, panel_top + 41), fill=accent, width=4)
+    _centered(draw, panel_top + 72, BRAND_NAME, _font("DejaVuSans-Bold.ttf", 30), (*accent, 255))
 
     y = panel_top + 145
     for line in lines:
@@ -102,7 +106,7 @@ def generate_verse_card(verse_text: str, reference: str, output_path: Path, them
         y += line_height
 
     _centered(draw, panel_bottom - 90, f"— {reference} —", _font("DejaVuSans-Bold.ttf", 30), (*accent, 255))
-    _centered(draw, HEIGHT - 78, "KJV  •  DAILY ENCOURAGEMENT", _font("DejaVuSans.ttf", 22), (235, 239, 242, 235))
+    _centered(draw, HEIGHT - 78, "KJV  •  DAILY ENCOURAGEMENT  •  BIBLE FEED", _font("DejaVuSans.ttf", 22), (235, 239, 242, 235))
 
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)

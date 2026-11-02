@@ -1,4 +1,4 @@
-"""Post rotating KJV verse cards and prewritten reflections every three hours."""
+"""Post rotating KJV verse cards and prewritten reflections every five hours."""
 
 from __future__ import annotations
 
@@ -16,16 +16,17 @@ from utils.formatter import format_post
 from utils.history import HistoryError, load_history, make_verse_key, save_history
 from utils.logger import configure_logging, logger
 
-FIRST_POST_HOUR = 0
-HOURS_BETWEEN_POSTS = 3
-POSTS_PER_DAY = 8
+FIRST_POST_HOUR = 3
+HOURS_BETWEEN_POSTS = 5
+POSTS_PER_DAY = 5
+SLOT_KEY_PREFIX = "five-hour-slot-"
 ORIGINAL_COLLECTION_SIZE = 16
 ROOT = Path(__file__).resolve().parent
 REFLECTIONS = json.loads((ROOT / "data" / "reflections.json").read_text(encoding="utf-8"))
 
 
 def slot_for_time(now: datetime) -> int:
-    """Return the zero-based three-hour slot for the local time."""
+    """Return the zero-based five-hour slot for the local time."""
     return ((now.hour - FIRST_POST_HOUR) % 24) // HOURS_BETWEEN_POSTS
 
 
@@ -38,14 +39,14 @@ def next_rotation_index(history: dict) -> int:
     ]
     if indices:
         return max(indices) + 1
-    # History created before the 80-passage upgrade used the original 16 verses.
+    # History created before persistent indices used the original 16 passages.
     # Start with new material rather than immediately repeating those passages.
     return ORIGINAL_COLLECTION_SIZE if history else 0
 
 
 def _slot_already_posted(history: dict, posted_date: date, slot: int) -> bool:
     prefix = f"{posted_date.isoformat()}|"
-    suffix = f"|slot-{slot}"
+    suffix = f"|{SLOT_KEY_PREFIX}{slot}"
     return any(key.startswith(prefix) and key.endswith(suffix) for key in history)
 
 
@@ -96,7 +97,7 @@ def run(settings: Settings, now: datetime | None = None) -> int:
         return 1
 
     base_key = make_verse_key(current_time.date(), "kjv", reference)
-    verse_key = f"{base_key}|slot-{slot}"
+    verse_key = f"{base_key}|{SLOT_KEY_PREFIX}{slot}"
     logger.info(
         "Prepared photo post for slot %s (rotation %s): %s\n%s",
         slot + 1,
@@ -142,6 +143,7 @@ def run(settings: Settings, now: datetime | None = None) -> int:
         "reference": reference,
         "source": "kjv",
         "slot": slot,
+        "schedule": "five-hour",
         "rotation_index": verse_index,
         "media": "photo",
         "theme": theme,
