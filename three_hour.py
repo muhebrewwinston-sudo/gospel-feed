@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import tempfile
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -19,15 +19,34 @@ from utils.logger import configure_logging, logger
 FIRST_POST_HOUR = 0
 HOURS_BETWEEN_POSTS = 3
 POSTS_PER_DAY = 8
+ORIGINAL_COLLECTION_SIZE = 16
 ROOT = Path(__file__).resolve().parent
 REFLECTIONS = json.loads((ROOT / "data" / "reflections.json").read_text(encoding="utf-8"))
 
 
-def rotation_for_time(now: datetime) -> tuple[int, int]:
-    """Return the daily slot and its position in the continuous KJV rotation."""
-    slot = ((now.hour - FIRST_POST_HOUR) % 24) // HOURS_BETWEEN_POSTS
-    index = (now.date().toordinal() * POSTS_PER_DAY + slot) % len(VERSES)
-    return slot, index
+def slot_for_time(now: datetime) -> int:
+    """Return the zero-based three-hour slot for the local time."""
+    return ((now.hour - FIRST_POST_HOUR) % 24) // HOURS_BETWEEN_POSTS
+
+
+def next_rotation_index(history: dict) -> int:
+    """Continue after the last recorded passage instead of restarting by date."""
+    indices = [
+        record["rotation_index"]
+        for record in history.values()
+        if isinstance(record, dict) and isinstance(record.get("rotation_index"), int)
+    ]
+    if indices:
+        return max(indices) + 1
+    # History created before the 80-passage upgrade used the original 16 verses.
+    # Start with new material rather than immediately repeating those passages.
+    return ORIGINAL_COLLECTION_SIZE if history else 0
+
+
+def _slot_already_posted(history: dict, posted_date: date, slot: int) -> bool:
+    prefix = f"{posted_date.isoformat()}|"
+    suffix = f"|slot-{slot}"
+    return any(key.startswith(prefix) and key.endswith(suffix) for key in history)
 
 
 def _caption(settings: Settings, verse_text: str, reference: str) -> tuple[str, str]:
@@ -57,19 +76,34 @@ def run(settings: Settings, now: datetime | None = None) -> int:
         logger.error("Live posting needs the two Facebook credentials.")
         return 2
 
-    slot, verse_index = rotation_for_time(current_time)
-    verse_text, reference = VERSES[verse_index]
-
     try:
         history = load_history(settings.history_file)
+    except HistoryError as exc:
+        logger.error("Could not read posting history: %s", exc)
+        return 1
+
+    slot = slot_for_time(current_time)
+    if _slot_already_posted(history, current_time.date(), slot) and not is_dry_run:
+        logger.info("This slot was already posted. Skipping.")
+        return 0
+
+    verse_index = next_rotation_index(history)
+    verse_text, reference = VERSES[verse_index % len(VERSES)]
+    try:
         message, theme = _caption(settings, verse_text, reference)
-    except (HistoryError, ValueError, KeyError) as exc:
+    except (ValueError, KeyError) as exc:
         logger.error("Could not prepare the post: %s", exc)
         return 1
 
     base_key = make_verse_key(current_time.date(), "kjv", reference)
     verse_key = f"{base_key}|slot-{slot}"
-    logger.info("Prepared photo post for slot %s: %s\n%s", slot + 1, reference, message)
+    logger.info(
+        "Prepared photo post for slot %s (rotation %s): %s\n%s",
+        slot + 1,
+        verse_index,
+        reference,
+        message,
+    )
 
     if verse_key in history and not is_dry_run:
         logger.info("This slot was already posted. Skipping.")
@@ -108,6 +142,7 @@ def run(settings: Settings, now: datetime | None = None) -> int:
         "reference": reference,
         "source": "kjv",
         "slot": slot,
+        "rotation_index": verse_index,
         "media": "photo",
         "theme": theme,
         "post_id": post_id,

@@ -12,7 +12,8 @@ Publishing uses the official Facebook Graph API. The project does not scrape Bib
 `three_hour.py` creates 1080×1350 portrait verse cards and uploads them through the Facebook Page photos API. It includes:
 
 - The same exact public-domain KJV rotation every three hours at 00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, and 21:00 Malawi time.
-- Sixteen prewritten AI reflections—no live AI API key or ongoing AI charges.
+- Eighty prewritten AI reflections—no live AI API key or ongoing AI charges.
+- A persistent rotation index that uses every passage once before cycling, rather than restarting every two days.
 - Six themed background images and bundled DejaVu fonts for consistent cards on GitHub Actions.
 - Local image generation with Pillow, so scripture text is rendered accurately rather than generated inside an AI image.
 
