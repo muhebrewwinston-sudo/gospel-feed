@@ -134,6 +134,17 @@
       "slot": 0,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-03|kjv|psalm 34:4 (kjv)|five-hour-slot-1": {
+      "media": "photo",
+      "post_id": "383365871537147_122224756286575004",
+      "posted_at": "2026-11-03T09:21:08.775983+02:00",
+      "reference": "Psalm 34:4 (KJV)",
+      "rotation_index": 16,
+      "schedule": "five-hour",
+      "slot": 1,
+      "source": "kjv",
+      "theme": "peace"
     }
   }
 }
