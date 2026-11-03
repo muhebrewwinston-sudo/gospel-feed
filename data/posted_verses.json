@@ -156,6 +156,17 @@
       "slot": 2,
       "source": "kjv",
       "theme": "hope"
+    },
+    "2026-11-03|kjv|psalm 37:5 (kjv)|five-hour-slot-3": {
+      "media": "photo",
+      "post_id": "383365871537147_122224815368575004",
+      "posted_at": "2026-11-03T20:10:11.013958+02:00",
+      "reference": "Psalm 37:5 (KJV)",
+      "rotation_index": 18,
+      "schedule": "five-hour",
+      "slot": 3,
+      "source": "kjv",
+      "theme": "guidance"
     }
   }
 }
