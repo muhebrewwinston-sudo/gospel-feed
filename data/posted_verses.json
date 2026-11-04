@@ -178,6 +178,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "rest"
+    },
+    "2026-11-04|kjv|psalm 56:3 (kjv)|five-hour-slot-0": {
+      "media": "photo",
+      "post_id": "383365871537147_122224850444575004",
+      "posted_at": "2026-11-04T03:09:13.037005+02:00",
+      "reference": "Psalm 56:3 (KJV)",
+      "rotation_index": 20,
+      "schedule": "five-hour",
+      "slot": 0,
+      "source": "kjv",
+      "theme": "strength"
     }
   }
 }
