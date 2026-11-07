@@ -365,6 +365,17 @@
       "slot": 1,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-07|kjv|isaiah 55:6 (kjv)|five-hour-slot-2": {
+      "media": "photo",
+      "post_id": "383365871537147_122225318432575004",
+      "posted_at": "2026-11-07T14:15:32.941967+02:00",
+      "reference": "Isaiah 55:6 (KJV)",
+      "rotation_index": 37,
+      "schedule": "five-hour",
+      "slot": 2,
+      "source": "kjv",
+      "theme": "guidance"
     }
   }
 }
