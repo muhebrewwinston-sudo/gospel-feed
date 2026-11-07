@@ -354,6 +354,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "strength"
+    },
+    "2026-11-07|kjv|isaiah 54:10 (kjv)|five-hour-slot-1": {
+      "media": "photo",
+      "post_id": "383365871537147_122225288126575004",
+      "posted_at": "2026-11-07T08:41:16.781270+02:00",
+      "reference": "Isaiah 54:10 (KJV)",
+      "rotation_index": 36,
+      "schedule": "five-hour",
+      "slot": 1,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
