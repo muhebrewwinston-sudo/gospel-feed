@@ -398,6 +398,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "hope"
+    },
+    "2026-11-08|kjv|zephaniah 3:17 (kjv)|five-hour-slot-1": {
+      "media": "photo",
+      "post_id": "383365871537147_122225418530575004",
+      "posted_at": "2026-11-08T08:47:08.140914+02:00",
+      "reference": "Zephaniah 3:17 (KJV)",
+      "rotation_index": 40,
+      "schedule": "five-hour",
+      "slot": 1,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
