@@ -464,6 +464,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "guidance"
+    },
+    "2026-11-10|kjv|luke 12:32 (kjv)|five-hour-slot-4": {
+      "media": "photo",
+      "post_id": "383365871537147_122225629658575004",
+      "posted_at": "2026-11-10T01:57:11.950289+02:00",
+      "reference": "Luke 12:32 (KJV)",
+      "rotation_index": 46,
+      "schedule": "five-hour",
+      "slot": 4,
+      "source": "kjv",
+      "theme": "rest"
     }
   }
 }
