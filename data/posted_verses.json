@@ -431,6 +431,17 @@
       "slot": 1,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-09|kjv|matthew 7:7 (kjv)|five-hour-slot-4": {
+      "media": "photo",
+      "post_id": "383365871537147_122225507756575004",
+      "posted_at": "2026-11-09T02:41:19.069785+02:00",
+      "reference": "Matthew 7:7 (KJV)",
+      "rotation_index": 43,
+      "schedule": "five-hour",
+      "slot": 4,
+      "source": "kjv",
+      "theme": "guidance"
     }
   }
 }
