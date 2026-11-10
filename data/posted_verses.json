@@ -487,6 +487,17 @@
       "source": "kjv",
       "theme": "guidance"
     },
+    "2026-11-10|kjv|john 15:5 (kjv)|five-hour-slot-3": {
+      "media": "photo",
+      "post_id": "383365871537147_122225717738575004",
+      "posted_at": "2026-11-10T20:22:37.146368+02:00",
+      "reference": "John 15:5 (KJV)",
+      "rotation_index": 50,
+      "schedule": "five-hour",
+      "slot": 3,
+      "source": "kjv",
+      "theme": "guidance"
+    },
     "2026-11-10|kjv|john 8:36 (kjv)|five-hour-slot-0": {
       "media": "photo",
       "post_id": "383365871537147_122225645846575004",
