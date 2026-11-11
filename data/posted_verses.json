@@ -563,6 +563,17 @@
       "slot": 3,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-12|kjv|romans 8:1 (kjv)|five-hour-slot-4": {
+      "media": "photo",
+      "post_id": "383365871537147_122225867246575004",
+      "posted_at": "2026-11-12T00:27:12.717765+02:00",
+      "reference": "Romans 8:1 (KJV)",
+      "rotation_index": 55,
+      "schedule": "five-hour",
+      "slot": 4,
+      "source": "kjv",
+      "theme": "hope"
     }
   }
 }
