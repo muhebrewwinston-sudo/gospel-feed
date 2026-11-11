@@ -520,6 +520,17 @@
       "source": "kjv",
       "theme": "rest"
     },
+    "2026-11-11|kjv|acts 1:8 (kjv)|five-hour-slot-1": {
+      "media": "photo",
+      "post_id": "383365871537147_122225781548575004",
+      "posted_at": "2026-11-11T09:18:58.305423+02:00",
+      "reference": "Acts 1:8 (KJV)",
+      "rotation_index": 52,
+      "schedule": "five-hour",
+      "slot": 1,
+      "source": "kjv",
+      "theme": "strength"
+    },
     "2026-11-11|kjv|john 16:33 (kjv)|five-hour-slot-0": {
       "media": "photo",
       "post_id": "383365871537147_122225750942575004",
