@@ -541,6 +541,17 @@
       "slot": 0,
       "source": "kjv",
       "theme": "strength"
+    },
+    "2026-11-11|kjv|romans 5:1 (kjv)|five-hour-slot-2": {
+      "media": "photo",
+      "post_id": "383365871537147_122225811302575004",
+      "posted_at": "2026-11-11T15:23:13.344676+02:00",
+      "reference": "Romans 5:1 (KJV)",
+      "rotation_index": 53,
+      "schedule": "five-hour",
+      "slot": 2,
+      "source": "kjv",
+      "theme": "peace"
     }
   }
 }
