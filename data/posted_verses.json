@@ -519,6 +519,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "rest"
+    },
+    "2026-11-11|kjv|john 16:33 (kjv)|five-hour-slot-0": {
+      "media": "photo",
+      "post_id": "383365871537147_122225750942575004",
+      "posted_at": "2026-11-11T03:09:16.142081+02:00",
+      "reference": "John 16:33 (KJV)",
+      "rotation_index": 51,
+      "schedule": "five-hour",
+      "slot": 0,
+      "source": "kjv",
+      "theme": "strength"
     }
   }
 }
