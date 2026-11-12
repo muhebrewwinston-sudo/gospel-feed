@@ -574,6 +574,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "hope"
+    },
+    "2026-11-12|kjv|romans 8:31 (kjv)|five-hour-slot-0": {
+      "media": "photo",
+      "post_id": "383365871537147_122225885072575004",
+      "posted_at": "2026-11-12T04:10:52.356420+02:00",
+      "reference": "Romans 8:31 (KJV)",
+      "rotation_index": 56,
+      "schedule": "five-hour",
+      "slot": 0,
+      "source": "kjv",
+      "theme": "strength"
     }
   }
 }
