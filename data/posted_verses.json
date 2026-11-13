@@ -640,6 +640,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "guidance"
+    },
+    "2026-11-13|kjv|2 corinthians 9:8 (kjv)|five-hour-slot-1": {
+      "media": "photo",
+      "post_id": "383365871537147_122226056258575004",
+      "posted_at": "2026-11-13T09:26:43.334448+02:00",
+      "reference": "2 Corinthians 9:8 (KJV)",
+      "rotation_index": 62,
+      "schedule": "five-hour",
+      "slot": 1,
+      "source": "kjv",
+      "theme": "hope"
     }
   }
 }
