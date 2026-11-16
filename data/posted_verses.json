@@ -761,6 +761,17 @@
       "slot": 3,
       "source": "kjv",
       "theme": "peace"
+    },
+    "2026-11-16|kjv|philippians 4:19 (kjv)|five-hour-slot-4": {
+      "media": "photo",
+      "post_id": "383365871537147_122226374408575004",
+      "posted_at": "2026-11-16T02:54:10.022335+02:00",
+      "reference": "Philippians 4:19 (KJV)",
+      "rotation_index": 73,
+      "schedule": "five-hour",
+      "slot": 4,
+      "source": "kjv",
+      "theme": "hope"
     }
   }
 }
