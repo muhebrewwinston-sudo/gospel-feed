@@ -860,6 +860,17 @@
       "slot": 1,
       "source": "kjv",
       "theme": "strength"
+    },
+    "2026-11-18|kjv|1 timothy 1:2 (kjv)|five-hour-slot-4": {
+      "media": "photo",
+      "post_id": "383365871537147_122226636182575004",
+      "posted_at": "2026-11-18T01:18:28.885136+02:00",
+      "reference": "1 Timothy 1:2 (KJV)",
+      "rotation_index": 82,
+      "schedule": "five-hour",
+      "slot": 4,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
