@@ -871,6 +871,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-18|kjv|titus 1:4 (kjv)|five-hour-slot-0": {
+      "media": "photo",
+      "post_id": "383365871537147_122226653696575004",
+      "posted_at": "2026-11-18T04:49:20.046632+02:00",
+      "reference": "Titus 1:4 (KJV)",
+      "rotation_index": 83,
+      "schedule": "five-hour",
+      "slot": 0,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
