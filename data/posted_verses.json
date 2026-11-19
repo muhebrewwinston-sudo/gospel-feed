@@ -970,6 +970,17 @@
       "slot": 2,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-20|kjv|mark 12:30 (kjv)|five-hour-slot-4": {
+      "media": "photo",
+      "post_id": "383365871537147_122226877682575004",
+      "posted_at": "2026-11-20T00:52:53.895363+02:00",
+      "reference": "Mark 12:30 (KJV)",
+      "rotation_index": 92,
+      "schedule": "five-hour",
+      "slot": 4,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
