@@ -937,6 +937,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-19|kjv|psalm 69:13 (kjv)|five-hour-slot-1": {
+      "media": "photo",
+      "post_id": "383365871537147_122226804872575004",
+      "posted_at": "2026-11-19T10:04:59.875976+02:00",
+      "reference": "Psalm 69:13 (KJV)",
+      "rotation_index": 89,
+      "schedule": "five-hour",
+      "slot": 1,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
