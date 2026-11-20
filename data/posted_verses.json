@@ -981,6 +981,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-20|kjv|psalm 86:11 (kjv)|five-hour-slot-0": {
+      "media": "photo",
+      "post_id": "383365871537147_122226893426575004",
+      "posted_at": "2026-11-20T04:10:46.465187+02:00",
+      "reference": "Psalm 86:11 (KJV)",
+      "rotation_index": 93,
+      "schedule": "five-hour",
+      "slot": 0,
+      "source": "kjv",
+      "theme": "guidance"
     }
   }
 }
