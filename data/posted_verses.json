@@ -1025,6 +1025,17 @@
       "slot": 0,
       "source": "kjv",
       "theme": "guidance"
+    },
+    "2026-11-21|kjv|colossians 1:2 (kjv)|five-hour-slot-4": {
+      "media": "photo",
+      "post_id": "383365871537147_122226996656575004",
+      "posted_at": "2026-11-21T00:28:59.182919+02:00",
+      "reference": "Colossians 1:2 (KJV)",
+      "rotation_index": 97,
+      "schedule": "five-hour",
+      "slot": 4,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
