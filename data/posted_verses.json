@@ -1102,6 +1102,17 @@
       "slot": 1,
       "source": "kjv",
       "theme": "strength"
+    },
+    "2026-11-22|kjv|psalm 68:35 (kjv)|five-hour-slot-2": {
+      "media": "photo",
+      "post_id": "383365871537147_122227208318575004",
+      "posted_at": "2026-11-22T15:53:32.203844+02:00",
+      "reference": "Psalm 68:35 (KJV)",
+      "rotation_index": 104,
+      "schedule": "five-hour",
+      "slot": 2,
+      "source": "kjv",
+      "theme": "strength"
     }
   }
 }
