@@ -1146,6 +1146,17 @@
       "slot": 0,
       "source": "kjv",
       "theme": "love"
+    },
+    "2026-11-23|kjv|psalm 25:5 (kjv)|five-hour-slot-1": {
+      "media": "photo",
+      "post_id": "383365871537147_122227312268575004",
+      "posted_at": "2026-11-23T10:22:45.434160+02:00",
+      "reference": "Psalm 25:5 (KJV)",
+      "rotation_index": 108,
+      "schedule": "five-hour",
+      "slot": 1,
+      "source": "kjv",
+      "theme": "guidance"
     }
   }
 }
