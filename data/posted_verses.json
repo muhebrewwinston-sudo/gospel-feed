@@ -1135,6 +1135,17 @@
       "slot": 2,
       "source": "kjv",
       "theme": "strength"
+    },
+    "2026-11-23|kjv|2 thessalonians 1:2 (kjv)|five-hour-slot-0": {
+      "media": "photo",
+      "post_id": "383365871537147_122227268546575004",
+      "posted_at": "2026-11-23T03:29:31.191880+02:00",
+      "reference": "2 Thessalonians 1:2 (KJV)",
+      "rotation_index": 107,
+      "schedule": "five-hour",
+      "slot": 0,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
