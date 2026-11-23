@@ -1168,6 +1168,17 @@
       "slot": 1,
       "source": "kjv",
       "theme": "guidance"
+    },
+    "2026-11-24|kjv|psalm 109:21 (kjv)|five-hour-slot-4": {
+      "media": "photo",
+      "post_id": "383365871537147_122227387442575004",
+      "posted_at": "2026-11-24T00:18:52.031002+02:00",
+      "reference": "Psalm 109:21 (KJV)",
+      "rotation_index": 110,
+      "schedule": "five-hour",
+      "slot": 4,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
