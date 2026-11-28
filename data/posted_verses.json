@@ -1366,6 +1366,17 @@
       "slot": 4,
       "source": "kjv",
       "theme": "guidance"
+    },
+    "2026-11-28|kjv|psalm 5:11 (kjv)|five-hour-slot-0": {
+      "media": "photo",
+      "post_id": "383365871537147_122227907150575004",
+      "posted_at": "2026-11-28T05:11:47.685403+02:00",
+      "reference": "Psalm 5:11 (KJV)",
+      "rotation_index": 128,
+      "schedule": "five-hour",
+      "slot": 0,
+      "source": "kjv",
+      "theme": "love"
     }
   }
 }
